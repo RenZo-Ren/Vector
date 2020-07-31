@@ -1,0 +1,12 @@
+[sources.in]
+  type = "socket" # required
+  address = "0.0.0.0:9000"
+  mode = "tcp"
+
+
+[sinks.out]
+ encoding.codec = "json"
+  inputs = ["in"]
+  region = "eu-west-1"
+  stream_name = "rene-deepsea-messages"
+  type = "aws_kinesis_firehose"
