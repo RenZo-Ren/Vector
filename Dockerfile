@@ -1,3 +1,3 @@
 FROM timberio/vector:latest-alpine
-COPY vector.toml /root/vector/vector.toml.  
+COPY vector.toml /etc/vector/vector.toml.  
 
