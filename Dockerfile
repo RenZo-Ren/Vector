@@ -1,3 +1,7 @@
 FROM timberio/vector:latest-alpine
-COPY vector.toml /etc/vector/vector.toml
+RUN mkdir root
+RUN cd root
+ADD https://github.com/RenZo-Ren/Vector/blob/master/vector.toml
+COPY vector.toml /root/vector/vector.toml.  
+
 EXPOSE 9000
